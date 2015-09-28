@@ -1,15 +1,13 @@
-/* eslint-disable no-var */
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './app/index.js'
+    './app/index'
   ],
-  devtool: 'eval-source-map',
+  devtool: 'eval',
   output: {
     path: __dirname,
     filename: 'bundle.js',
@@ -17,19 +15,16 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
-    extensions: [ '', '.js' ]
+    extensions: ['', '.js']
   },
   module: {
-    loaders: [
-      {
-        test: /\.js?$/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'app')
-      }
-    ]
+    loaders: [{
+      test: /\.js?$/,
+      loaders: ['react-hot', 'babel'],
+      include: path.join(__dirname, 'app')
+    }]
   }
 };
