@@ -5,9 +5,9 @@ import { RouteHandler } from 'react-router';
 import * as Actions from '../actions/';
 import { isLoaded } from '../reducers/weatherInfo';
 import SearchForm from '../components/searchForm';
-import Spinner from '../components/Spinner';
 
-import loading from '../decorators/';
+import spinner from '../components/spinner';
+import loading from '../../loading';
 
 function loadData(props) {
   const city = props.params.city;
@@ -20,7 +20,7 @@ function loadData(props) {
 )
 @loading(
   state => state.weatherInfo.loading,
-  Spinner
+  spinner
 )
 export default class CityPage extends Component {
   static propTypes = {
