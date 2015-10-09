@@ -7,15 +7,12 @@ export default function weatherInfo(state = {
 
   switch(action.type) {
     case 'WEATCHER_INFO_REQUESTED':
-      // console.log('WEATCHER_INFO_REQUESTED: ', action)
       return Object.assign({}, state, {loading: true});
 
     case 'WEATCHER_INFO_RECEIVED':
-      // console.log('WEATCHER_INFO_RECEIVED: ', action)
       return Object.assign({}, state, {data: action.result, loading: false});
 
     case 'WEATCHER_INFO_FAILED':
-      // console.log('WEATCHER_INFO_FAILED: ', action)
       return Object.assign({}, state, {error: action.error, loading: false, loaded: false});
 
     default:
