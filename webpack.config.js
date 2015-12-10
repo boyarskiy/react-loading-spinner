@@ -6,11 +6,11 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './src/example/index'
+    './example/index'
   ],
   devtool: 'eval',
   output: {
-    path: path.resolve('example'),
+    path: __dirname,
     filename: 'bundle.js'
   },
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
     loaders: [{
       test: /\.js?$/,
       loaders: ['react-hot', 'babel'],
-      include: [path.resolve('src')]
+      include: path.join(__dirname, 'example')
     }]
   }
 };

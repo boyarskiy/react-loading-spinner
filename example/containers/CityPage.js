@@ -7,7 +7,7 @@ import { isLoaded } from '../reducers/weatherInfo';
 import SearchForm from '../components/searchForm';
 
 import spinner from '../components/spinner';
-import loading from '../../loading';
+import loading from '../src/loading';
 
 function loadData(props) {
   const city = props.params.city;
