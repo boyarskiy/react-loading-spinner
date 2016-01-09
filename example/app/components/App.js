@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Content from './Content';
 import Spinner from './Spinner';
-import Loading from './Loading';
+import Loading from 'react-loading-spinner';
 
 export default class App extends React.Component {
   constructor() {
@@ -18,7 +18,7 @@ export default class App extends React.Component {
       <div>
         <button onClick={this.handleOnClick.bind(this)}>Start loading</button>
 
-        <Loading isLoading={this.state.isLoading} spinner={Spinner}>
+        <Loading isLoading={this.state.isLoading} loadingClassName={'loading'} spinner={Spinner}>
           <Content loadedContent={this.state.loadedContent} />
         </Loading>
 
