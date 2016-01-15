@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import DefaultSpinner from './defaultSpinner';
 
 export default class Loading extends Component {
 
@@ -15,8 +16,12 @@ export default class Loading extends Component {
     );
   }
 
+  renderDefaultSpinner() {
+    return <DefaultSpinner />;
+  }
+
   renderSpinner(spinner, loadingClassName) {
-    return !spinner ? <div className={loadingClassName}>Loading...</div> : this.renderCustomSpinner(spinner, loadingClassName);
+    return !spinner ? this.renderDefaultSpinner() : this.renderCustomSpinner(spinner, loadingClassName);
   }
 
   render() {
