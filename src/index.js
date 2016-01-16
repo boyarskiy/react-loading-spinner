@@ -17,11 +17,15 @@ export default class Loading extends Component {
   }
 
   renderDefaultSpinner() {
-    return <DefaultSpinner />;
+    return (
+      <div className={loadingClassName}>
+        <DefaultSpinner />
+      </div>
+    );
   }
 
   renderSpinner(spinner, loadingClassName) {
-    return !spinner ? this.renderDefaultSpinner() : this.renderCustomSpinner(spinner, loadingClassName);
+    return !spinner ? this.renderDefaultSpinner(loadingClassName) : this.renderCustomSpinner(spinner, loadingClassName);
   }
 
   render() {
