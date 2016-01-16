@@ -20,10 +20,16 @@ module.exports = {
     extensions: ['', '.js']
   },
   module: {
-    loaders: [{
-      test: /\.js?$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'app')
-    }]
+    loaders: [
+      {
+        test: /\.js?$/,
+        loaders: ['babel'],
+        include: path.join(__dirname, 'app')
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      }
+    ]
   }
 };
