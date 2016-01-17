@@ -16,7 +16,7 @@ export default class Loading extends Component {
     );
   }
 
-  renderDefaultSpinner() {
+  renderDefaultSpinner(loadingClassName) {
     return (
       <div className={loadingClassName}>
         <DefaultSpinner />
