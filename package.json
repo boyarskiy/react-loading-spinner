@@ -1,13 +1,17 @@
 {
   "name": "react-loading-spinner",
-  "version": "1.0.2",
-  "description": "A simple loading spinner component for React",
-  "main": "src/index.js",
+  "version": "1.0.9",
+  "description": "Loading spinner component for React",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha test --compilers js:babel-core/register",
-    "build": "./node_modules/.bin/webpack --config webpack.config.production.js"
+    "build:lib": "babel src --out-dir lib",
+    "build:min": "./node_modules/.bin/webpack --config webpack.config.production.js",
+    "build": "npm run build:lib && npm run build:min",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
+    "babel": "^5.5.8",
     "babel-core": "^5.6.18",
     "babel-loader": "^5.1.4",
     "babel-runtime": "^5.8.20",
@@ -28,9 +32,10 @@
   },
   "keywords": [
     "react",
+    "loading",
     "spinner",
     "react-component"
-  ],  
+  ],
   "author": "Yevhen Boyarskiy",
   "license": "MIT"
 }
