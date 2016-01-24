@@ -13,7 +13,9 @@ npm install -save react-loading-spinner
 Show loading spinner when content is loading and show content when it is loaded.
 
 ```js
-<Loading isLoading={this.props.isLoadingContent} loadingClassName='loading' spinner={Spinner}>
+<Loading isLoading={this.props.isLoadingContent}
+         loadingClassName='loading'
+         spinner={Spinner}>
   {this.props.content ? (
     <Content />
   ) : null}
@@ -24,17 +26,11 @@ See [example](https://github.com/boyarskiy/react-loading-spinner/tree/master/exa
 
 ## Options
 
-#### `isLoading`:
+#### `isLoading`: it is the state of spinner, if ```true``` — show spinner, otherwise show content if it is exist.
 
-It is the state of spinner, if ```true``` - show spinner, otherwise show content if it is excited.
+#### `spinner`: set custom React component spinner
 
-#### `spinner`:
-
-Set custom React component spinner
-
-#### `loadingClassName`:
-
-Style classname for loading wrapper. By default ```loadingContiner```
+#### `loadingClassName`: style classname for loading wrapper. By default ```loadingContiner```
 
 ## License
 
