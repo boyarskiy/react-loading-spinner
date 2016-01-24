@@ -26,11 +26,17 @@ See [example](https://github.com/boyarskiy/react-loading-spinner/tree/master/exa
 
 ## Options
 
-#### `isLoading`: it is the state of spinner, if ```true``` — show spinner, otherwise show content if it is exist.
+#### `isLoading`
 
-#### `spinner`: set custom React component spinner
+It is the state of spinner, if ```true``` — show spinner, otherwise show content if it is exist.
 
-#### `loadingClassName`: style classname for loading wrapper. By default — ```loadingContiner```
+#### `spinner`
+
+Set custom React component spinner
+
+#### `loadingClassName`
+
+Style classname for loading wrapper. By default — ```loadingContiner```
 
 ## License
 
