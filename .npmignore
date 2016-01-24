@@ -1,0 +1,7 @@
+/src/
+/test/
+/example/
+.gitignore
+build-gh-pages.js
+npm-debug.log
+webpack.config.production.js
