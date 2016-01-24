@@ -9,8 +9,9 @@
     "babel-runtime": "^5.8.20",
     "core-js": "^1.1.0",
     "css-loader": "^0.23.1",
-    "react": "^0.14.0",
+    "react": "^0.14.6",
     "react-dom": "^0.14.0",
+    "react-loading-spinner": "^1.0.8",
     "style-loader": "^0.13.0"
   },
   "devDependencies": {

@@ -1,0 +1,13 @@
+.base {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+.defloading {
+  margin-left: 50px;
+}
