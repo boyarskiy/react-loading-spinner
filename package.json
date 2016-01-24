@@ -1,22 +1,37 @@
 {
   "name": "react-loading-spinner",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A simple loading spinner component for React",
+  "main": "dist/bundle.js",
   "scripts": {
-    "test": "mocha test --compilers js:babel-core/register"
+    "test": "mocha test --compilers js:babel-core/register",
+    "build": "./node_modules/.bin/webpack --config webpack.config.production.js",
+    "publish": "npm run build && node ./build-gh-pages.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "^5.6.18",
     "babel-loader": "^5.1.4",
     "babel-runtime": "^5.8.20",
+    "css-loader": "^0.23.1",
     "expect": "^1.13.4",
+    "gulp": "^3.9.0",
+    "gulp-gh-pages": "^0.5.4",
     "jsdom": "^7.2.0",
     "mocha": "^2.3.3",
     "mocha-jsdom": "^1.0.0",
-    "react": "^0.14.0",
+    "react-addons-test-utils": "^0.14.3",
     "react-dom": "^0.14.0",
-    "react-addons-test-utils": "^0.14.3"
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.12"
   },
+  "peerDependencies": {
+    "react": "^0.14.0"
+  },
+  "keywords": [
+    "react",
+    "spinner",
+    "react-component"
+  ],  
   "author": "Yevhen Boyarskiy",
   "license": "MIT"
 }
