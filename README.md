@@ -30,7 +30,7 @@ See [example](https://github.com/boyarskiy/react-loading-spinner/tree/master/exa
 
 #### `spinner`: set custom React component spinner
 
-#### `loadingClassName`: style classname for loading wrapper. By default ```loadingContiner```
+#### `loadingClassName`: style classname for loading wrapper. By default — ```loadingContiner```
 
 ## License
 
