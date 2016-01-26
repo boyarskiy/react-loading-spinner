@@ -22,21 +22,31 @@ Show loading spinner when content is loading and show content when it is loaded.
 </Loading>
 ```
 
+You can also assign content as a prop:
+
+```js
+<Loading isLoading={this.props.isLoadingContent} children={Content} />
+```
+
 See [example](https://github.com/boyarskiy/react-loading-spinner/tree/master/example)
 
 ## Options
 
 #### `isLoading`
 
-It is the state of spinner, if ```true``` — show spinner, otherwise show content if it is exist.
+It is the state of loading spinner, if ```true``` — show spinner, otherwise show content if it is exist.
 
 #### `spinner`
 
-Set custom React component spinner
+Set react component, as a custom spinner. If it is not exist there will be default spinner.
 
 #### `loadingClassName`
 
-Style classname for loading wrapper. By default — ```loadingContiner```
+Style class name for loading wrapper. By default — ```loadingContiner```
+
+#### `children`
+
+Assign child component as a property.
 
 ## License
 
