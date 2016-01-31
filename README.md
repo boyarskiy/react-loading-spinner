@@ -22,7 +22,7 @@ Show loading spinner when content is loading and show content when it is loaded.
 </Loading>
 ```
 
-You can also assign content as a prop:
+It is possible to assign content as a prop:
 
 ```js
 <Loading isLoading={this.props.isLoadingContent} children={Content} />
