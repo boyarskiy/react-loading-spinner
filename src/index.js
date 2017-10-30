@@ -1,5 +1,6 @@
 import React from 'react';
-import DefaultSpinner from './defaultSpinner';
+
+const DefaultSpinner = () => <div className='defaultSpinner'></div>;
 
 const Loading = (props) => {
   const {
