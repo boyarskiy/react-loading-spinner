@@ -1,13 +1,17 @@
-import React, { PropTypes, Component } from 'react';
+import React from 'react';
 import DefaultSpinner from './defaultSpinner';
 
-export default class Loading extends Component {
+const Loading = (props) => {
+  const {
+    isLoading,
+    loadingClassName,
+    spinner,
+    children
+  } = props;
 
-  renderChildrenComponent(children) {
-    return children ? children : null;
-  }
+  const renderChildrenComponent = (children) => children ? children : null;
 
-  renderCustomSpinner(spinner, loadingClassName) {
+  const renderCustomSpinner = (spinner, loadingClassName) => {
     const Spinner = spinner;
     return (
       <div className={loadingClassName}>
@@ -16,7 +20,7 @@ export default class Loading extends Component {
     );
   }
 
-  renderDefaultSpinner(loadingClassName) {
+  const renderDefaultSpinner = (loadingClassName) => {
     return (
       <div className={loadingClassName}>
         <DefaultSpinner />
@@ -24,23 +28,16 @@ export default class Loading extends Component {
     );
   }
 
-  renderSpinner(spinner, loadingClassName) {
-    return !spinner ? this.renderDefaultSpinner(loadingClassName) : this.renderCustomSpinner(spinner, loadingClassName);
+  const renderSpinner = (spinner, loadingClassName) => {
+    return !spinner ? renderDefaultSpinner(loadingClassName) : renderCustomSpinner(spinner, loadingClassName);
   }
 
-  render() {
-    const {
-      isLoading,
-      loadingClassName,
-      spinner,
-      children
-    } = this.props;
-
-    return isLoading ? this.renderSpinner(spinner, loadingClassName) : this.renderChildrenComponent(children);
-  }
+  return isLoading ? renderSpinner(spinner, loadingClassName) : renderChildrenComponent(children);
 }
 
 Loading.defaultProps = {
   isLoading: false,
   loadingClassName: 'loadingContiner'
 };
+
+export default Loading;
